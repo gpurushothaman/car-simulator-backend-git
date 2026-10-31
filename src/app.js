@@ -21,7 +21,7 @@ const authRoutes = require("./routes/admin/authRoutes");
 const adminRoutes = require("./routes/admin");
 
 //Customer portal
-//const userRoutes = require("./routes/frontend");
+const userRoutes = require("./routes/frontend");
 
 const express = require("express");
 const cors = require("cors");
@@ -44,5 +44,6 @@ app.use("/api/admin", auth, admin, adminRoutes);
 
 //Customer portal ( auth, middleware, routes )
 //app.use("/api/user", auth, user, userRoutes);
+app.use("/api/user", userRoutes);
 
 module.exports = app;
