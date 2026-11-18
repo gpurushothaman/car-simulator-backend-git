@@ -4,7 +4,7 @@ const RearBumper = require("../../models/admin/RearBumper");
 
 exports.getRearBumpers = async (req, res) => {
   try {
-    const rearbumpers = await rearbumperId.find();
+    const rearbumpers = await RearBumperId.find();
 
     res.status(200).json({
       success: true,
